@@ -226,6 +226,7 @@ var generate_scala = function(el){
          return '  ' + sanitize_var_name(v.find('label.keyname').text()) + ': ' + sst;
       }, this);
       content += t.one_scala_cclass({cname:value.find('input.class_name').val(), ccontent: props.join(',\n')}) + '\n';
+      content += t.one_scala_object({cname:value.find('input.class_name').val(), ccontent: props.join(',\n')}) + '\n'
    }, this);
    $('#caseclassform textarea').val(content);
    $('#mycodeis').html(t.scala_code({code:content}));
