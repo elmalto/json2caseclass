@@ -319,6 +319,7 @@ var t = {
          +'</fieldset>'
          +'</div>'),
    one_scala_cclass : _.template('case class <%= cname %>(\n<%= ccontent %>\n)'),
+   one_scala_object: _.template('object <%= cname %> {\nimplicit val format: Format[<%= cname %>] = Json.format[<%= cname %>]\n}')
    one_scala_props : _.template('<%= pname %>\:<%= ptype %>'),
    scala_code : _.template('<pre class="sh_scala"><%= code %></pre>')
 
